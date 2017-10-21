@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #FAFAFA;
+}
+
+.insta {
+  width: 800px;
+  margin: 40px 10px;
+}
+.insta .insta-photo {
+  display: flex;
+  padding-bottom: 10px;
+}
+.insta .data-first {
+  width: 400px;
+  background: white;
+  border: 1px solid #ccc;
+}
+.insta .sign-in {
+  width: 400px;
+  background: white;
+  border: 1px solid #ccc;
+}
