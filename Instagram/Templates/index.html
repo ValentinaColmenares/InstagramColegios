@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <section class="insta">
+    <section class="insta" action="{% url 'index' %}" method="post">
       <section class="insta-photo"><img src="http://media.idownloadblog.com/wp-content/uploads/2016/05/Instgram-8.0-redesign-teaser.jpg" />
         <section class="insta-data"><center>
           <section class="data-first">
@@ -17,19 +17,22 @@
             <h3>Regístrate para ver fotos y videos de tus amigos.</h3>
             <button class="insta-facebook">Iniciar sesión con Facebook</button>
             <p>--------------------- o ---------------------</p>
-            <input placeholder='Número de celular o correo    electrónico'>
-            <br/>
-            <input placeholder='Nombre completo'>
-            <br/>
-            <input placeholder='Nombre de usuario'>
-            <br/>
-            <input type="password" placeholder='Contraseña'>
-            <br/>
-            <button class="insta-facebook">Registrarte</button>
+              <form class="" action="{% url 'index' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="correo" placeholder='Número de celular o correo    electrónico'>
+                <br/>
+                <input type="text" name="nombre_completo" placeholder='Nombre completo'>
+                <br/>
+                <input type="text" name="usuario" placeholder='Nombre de usuario'>
+                <br/>
+                <input type="password" name="password" type="password" placeholder='Contraseña'>
+                <br/>
+                <button name="button">Registrarte</button>
+              </form>
             <p>Al registrarte, aceptas nuestras Condiciones y la Política privada.</p>
           </section>
           <section class="sign-in">
-            <p>¿Tienes una cuenta? Inicia sesión</p>
+            <p>¿Tienes una cuenta? <a href="{% url 'login' %}">Entrar</a> </p>
           </section>
           <section class="dowload">
             <p>Descargar aplicación</p>

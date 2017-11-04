@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram-PhotoBox</title>
+  <link href="https://file.myfontastic.com/QFUCFd3MqvngEKhFwf47yn/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'CSS/stylehome.css' %}">
+
+</head>
+
+<body>
+  <section class='photo_container'>
+  <section class='photo_header'>
+    <img src="https://prof.prepics-cdn.com/image/upload/c_thumb,w_40,h_40,g_faces/v1467546628/prepics-prof-p-335788873.jpg" class='photo_user'>
+    <h3 class='photo_username'>Username</h3>
+  </section>
+
+  <section class='photo_image'>
+    <img src="https://www.definicionabc.com/wp-content/uploads/Paisaje-Natural.jpg">
+  </section>
+
+  <section class='photo_icons'>
+    <i class="icon-heart-o"></i>
+    <i class="icon-comment-o"></i>
+  </section>
+
+  <h5 class='photo_likes'><span>25,545<span> Me gusta<h5>
+  <section class='photo_comments'>
+    <section class='photo_comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, illum.</section>
+    <section class='photo_comment'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consequuntur pariatur modi!</section>
+    <section class='photo_comment'>Lorem ipsum dolor sit amet.</section>
+  </section>
+  <section class='photo_add_comment'>
+    <input placeholder='Agrega un comentario...'>
+    <i class="icon-puntos"></i>
+  </section>
+</section>
+
+<a href="{% url 'logout' %}">Cerrar sesión</a>
+
+
+</body>
+</html>
